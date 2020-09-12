@@ -1,2 +1,3 @@
-# JS-Playgound
-Some small JS projects are implemented to sharpen my JavaScript knowledge while learning with practising.
+# Web-Playground
+
+Some small web projects are implemented to sharpen my HTML, CSS, JavaScript knowledge while learning with practicing.
