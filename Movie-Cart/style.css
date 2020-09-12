@@ -1,0 +1,22 @@
+.movie {
+  width: 100%;
+  color: #fff;
+  padding: 20px 20px 20px 190px;
+  box-sizing: border-box;
+  background: url("http://i.imgur.com/lcm5byq.png") 20px 20px/ 150px 218px no-repeat,
+    url("http://i.imgur.com/2tiJEnP.png") 0% 0% / cover;
+}
+
+.movie__description {
+  font-size: 1.5em;
+}
+
+.movie__button {
+  display: block;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 13px;
+  background-color: #eb383b;
+  margin-top: 40px;
+  border: 0; /* or use, NONE*/
+}
