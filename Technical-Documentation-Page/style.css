@@ -67,11 +67,14 @@ code {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 1230px) {
+@media screen and (min-width: 950px) {
+  body{
+    display: flex;
+    position: relative;
+  }
   #navbar {
-    width: 270px;
+    width: 30%;
     height: auto;
-    float: left;
     position: fixed;
     border-right: #c3c3c5 2px solid;
     margin-top: 0px;
@@ -84,7 +87,8 @@ code {
     overflow-y: auto;
   }
   main {
-    width: 75%;
-    float: right;
+    width: 70%;
+    position: absolute;
+    left: 30%;
   }
 }
