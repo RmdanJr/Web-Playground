@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  background-color: #fafafa;
+  max-width: 400px;
+  min-width: 300px;
+  margin: auto; }
+
+header {
+  width: 100%; }
+  header h1 {
+    width: 90%;
+    margin: 70px auto 40px;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em; }
+
+main {
+  width: 100%; }
+  main article {
+    width: 90%;
+    margin: 40px auto 70px; }
+    main article h2 {
+      width: 300px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      text-transform: uppercase; }
+    main article p {
+      width: 300px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-1 {
+    width: 40%;
+    position: relative;
+    margin: 5%; }
+    main .section-1 img {
+      width: 90%;
+      height: auto; }
+    main .section-1 p {
+      width: 90px;
+      font-family: "PT Serif", serif;
+      font-size: 10px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 68%;
+      top: 12%; }
+    main .section-1 h3 {
+      margin-top: 5px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-2 {
+    width: 40%;
+    position: relative;
+    margin: 5%; }
+    main .section-2 img {
+      width: 90%;
+      height: auto; }
+    main .section-2 p {
+      width: 90px;
+      font-family: "PT Serif", serif;
+      font-size: 10px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 68%;
+      top: 12%; }
+    main .section-2 h3 {
+      margin-top: 5px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-3 {
+    width: 40%;
+    position: relative;
+    margin: 5%; }
+    main .section-3 img {
+      width: 90%;
+      height: auto; }
+    main .section-3 p {
+      width: 90px;
+      font-family: "PT Serif", serif;
+      font-size: 10px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 68%;
+      top: 12%; }
+    main .section-3 h3 {
+      margin-top: 5px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-4 {
+    width: 40%;
+    position: relative;
+    margin: 5%; }
+    main .section-4 img {
+      width: 90%;
+      height: auto; }
+    main .section-4 p {
+      width: 90px;
+      font-family: "PT Serif", serif;
+      font-size: 10px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 68%;
+      top: 12%; }
+    main .section-4 h3 {
+      margin-top: 5px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-5 {
+    width: 40%;
+    position: relative;
+    margin: 5%; }
+    main .section-5 img {
+      width: 90%;
+      height: auto; }
+    main .section-5 p {
+      width: 90px;
+      font-family: "PT Serif", serif;
+      font-size: 10px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 68%;
+      top: 12%; }
+    main .section-5 h3 {
+      margin-top: 5px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-6 {
+    width: 40%;
+    position: relative;
+    margin: 5%; }
+    main .section-6 img {
+      width: 90%;
+      height: auto; }
+    main .section-6 p {
+      width: 90px;
+      font-family: "PT Serif", serif;
+      font-size: 10px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 68%;
+      top: 12%; }
+    main .section-6 h3 {
+      margin-top: 5px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px; }
+  main .section-2 {
+    margin-top: 20%; }
+  main .section-1 {
+    float: left; }
+  main .section-3 {
+    float: left; }
+  main .section-5 {
+    float: left; }
+  main .section-2 {
+    float: right; }
+  main .section-4 {
+    float: right; }
+  main .section-6 {
+    float: right; }
+
+footer {
+  clear: both;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px; }
+  footer p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #a9a9a9;
+    margin: auto; }
+
+@media screen and (min-width: 800px) {
+  body {
+    max-width: 100%; }
+
+  header {
+    width: 40%;
+    margin: 102px auto 150px;
+    float: left; }
+    header h1 {
+      width: 80%;
+      text-align: right;
+      margin: auto; }
+
+  main {
+    width: 100%; }
+    main article {
+      width: 40%;
+      float: right;
+      margin: 80px 5% 30px 0; }
+      main article h2 {
+        text-align: left;
+        width: 300px; }
+      main article p {
+        text-align: left;
+        width: 300px; }
+    main .section-1 {
+      width: 25%;
+      position: relative;
+      float: left;
+      margin: calc(10% / 6); }
+      main .section-1 img {
+        max-width: 187px;
+        height: auto; }
+      main .section-1 p {
+        position: absolute;
+        left: 148px;
+        top: 30px; }
+      main .section-1 h3 {
+        margin-top: 5px; }
+    main .section-2 {
+      width: 25%;
+      position: relative;
+      float: left;
+      margin: calc(10% / 6); }
+      main .section-2 img {
+        max-width: 187px;
+        height: auto; }
+      main .section-2 p {
+        position: absolute;
+        left: 148px;
+        top: 30px; }
+      main .section-2 h3 {
+        margin-top: 5px; }
+    main .section-3 {
+      width: 25%;
+      position: relative;
+      float: left;
+      margin: calc(10% / 6); }
+      main .section-3 img {
+        max-width: 187px;
+        height: auto; }
+      main .section-3 p {
+        position: absolute;
+        left: 148px;
+        top: 30px; }
+      main .section-3 h3 {
+        margin-top: 5px; }
+    main .section-4 {
+      width: 25%;
+      position: relative;
+      float: left;
+      margin: calc(10% / 6); }
+      main .section-4 img {
+        max-width: 187px;
+        height: auto; }
+      main .section-4 p {
+        position: absolute;
+        left: 148px;
+        top: 30px; }
+      main .section-4 h3 {
+        margin-top: 5px; }
+    main .section-5 {
+      width: 25%;
+      position: relative;
+      float: left;
+      margin: calc(10% / 6); }
+      main .section-5 img {
+        max-width: 187px;
+        height: auto; }
+      main .section-5 p {
+        position: absolute;
+        left: 148px;
+        top: 30px; }
+      main .section-5 h3 {
+        margin-top: 5px; }
+    main .section-6 {
+      width: 25%;
+      position: relative;
+      float: left;
+      margin: calc(10% / 6); }
+      main .section-6 img {
+        max-width: 187px;
+        height: auto; }
+      main .section-6 p {
+        position: absolute;
+        left: 148px;
+        top: 30px; }
+      main .section-6 h3 {
+        margin-top: 5px; }
+    main .section-2,
+    main .section-5 {
+      margin-top: 100px; }
+    main .section-4,
+    main .section-1 {
+      clear: both;
+      margin-left: 15%; } }
+
+/*# sourceMappingURL=style.css.map */
