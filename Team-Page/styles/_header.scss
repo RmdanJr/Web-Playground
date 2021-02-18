@@ -1,0 +1,23 @@
+header {
+  width: 100%;
+  h1 {
+    width: 90%;
+    margin: 70px auto 40px;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    @media screen and (min-width: 800px) {
+      width: 80%;
+      text-align: right;
+      margin: auto;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    width: 40%;
+    margin: 102px auto 150px;
+    float: left;
+  }
+}
