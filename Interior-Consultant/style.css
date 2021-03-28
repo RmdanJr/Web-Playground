@@ -2,6 +2,8 @@
 body {
   background-color: black;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -31,7 +33,8 @@ header span.material-icons {
   font-size: 50px;
   color: #f2f2f2;
 }
-header nav {
+
+nav {
   display: none;
 }
 
@@ -40,7 +43,13 @@ main {
   width: 100%;
   padding: 15px;
 }
-main h1 {
+main .description {
+  display: block;
+  width: 100%;
+  min-width: 365px;
+  max-width: 400px;
+}
+main .description h1 {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: 500;
@@ -48,7 +57,7 @@ main h1 {
   line-height: 46px;
   color: #ffffff;
 }
-main p {
+main .description p {
   width: 75%;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -57,50 +66,59 @@ main p {
   line-height: 17px;
   color: #ffffff;
 }
-main p.read-more {
+main .description p.read-more {
   font-weight: bold;
   padding: 20px 0px;
 }
-main p span {
+main .description p span {
   position: relative;
   top: 8px;
 }
-main img {
+main .gallary {
+  display: block;
   width: 100%;
+  min-width: 365px;
+  max-width: 400px;
 }
-main .card-container {
+main .gallary .gallary-photo {
+  width: 100%;
+  min-width: 365px;
+}
+main .gallary .card-container {
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  width: fit-content;
+  height: 80%;
+  width: 80%;
+  max-width: 365px;
+  min-width: 250px;
   position: relative;
   bottom: 75px;
-  left: 50px;
+  left: 6%;
   background: black;
 }
-main .card-container .card-head {
+main .gallary .card-container .card-head {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-main .card-container .card-head .img-container {
+main .gallary .card-container .card-head .img-container {
   width: 70px;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .card-container .card-head .img-container img {
+main .gallary .card-container .card-head .img-container img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-main .card-container .card-head .details-container {
+main .gallary .card-container .card-head .details-container {
   display: flex;
   flex-direction: column;
 }
-main .card-container .card-head .details-container h3 {
+main .gallary .card-container .card-head .details-container h3 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -110,7 +128,7 @@ main .card-container .card-head .details-container h3 {
   margin: 3px 0px;
   width: auto;
 }
-main .card-container .card-head .details-container p {
+main .gallary .card-container .card-head .details-container p {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -120,11 +138,13 @@ main .card-container .card-head .details-container p {
   margin: 3px 0px;
   width: auto;
 }
-main .card-container .card-content {
-  width: 235px;
+main .gallary .card-container .card-content {
+  width: 80%;
+  max-width: 365px;
+  min-width: 250px;
   padding: 0px 0px 0px 20px;
 }
-main .card-container .card-content p {
+main .gallary .card-container .card-content p {
   font-family: "Lora", serif;
   font-style: normal;
   font-weight: bold;
@@ -133,6 +153,38 @@ main .card-container .card-content p {
   color: #ffffff;
 }
 
+@media screen and (min-width: 900px) {
+  header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+    margin: 30px 0px 100px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px 10%;
+  }
+  main .description {
+    display: block;
+    width: 50%;
+    min-width: 365px;
+    max-width: 400px;
+  }
+  main .gallary {
+    display: block;
+    width: 50%;
+    min-width: 365px;
+    max-width: 400px;
+  }
+}
 footer {
   width: 100%;
   box-sizing: border-box;
@@ -143,6 +195,54 @@ footer {
   line-height: 17px;
   text-align: center;
   color: #a9a9a9;
+}
+
+.open-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: black;
+  z-index: 10;
+}
+
+.open-ul {
+  box-sizing: border-box;
+  height: 70%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.open-li {
+  display: block;
+}
+
+.open-a {
+  width: 50px;
+  text-align: start;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.active {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #f2f2f2;
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

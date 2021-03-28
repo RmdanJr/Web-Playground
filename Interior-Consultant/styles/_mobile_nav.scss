@@ -1,0 +1,47 @@
+.open-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: black;
+  z-index: 10;
+}
+
+.open-ul {
+  box-sizing: border-box;
+  height: 70%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.open-li {
+  display: block;
+}
+
+.open-a {
+  width: 50px;
+  text-align: start;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.active {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #f2f2f2;
+}
+
+.hide {
+  display: none;
+}
