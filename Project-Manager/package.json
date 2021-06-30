@@ -1,0 +1,17 @@
+{
+  "name": "Project Manager",
+  "version": "1.0.0",
+  "description": "Project Manager",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Hassan Ramadan",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
