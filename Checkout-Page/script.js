@@ -45,7 +45,6 @@ product2AddBtn.addEventListener('click', handler('increment', product2Count))
 product2MinusBtn.addEventListener('click', handler('decrement', product2Count))
 
 /*Validate Form Inputs*/
-
 // helper functions, check if input value is valid or not using regex
 const isValidEmail = (email) => {
   const regex =
@@ -159,6 +158,18 @@ const validateTotalPrice = () => {
   changeVisiblity(isValidPrice(totalPrice.innerHTML), totalPriceValidationMsg)
 }
 
+const showAlert = () => {
+  const alert = document.querySelector('.alert')
+  const closeIcon = document.querySelector('.close-icon')
+  const visibleErrors = document.querySelectorAll('.visible')
+  if (!visibleErrors.length) {
+    alert.classList.add('display-flex')
+  }
+  closeIcon.addEventListener('click', () => {
+    alert.classList.remove('display-flex')
+  })
+}
+
 // prevent default on submition and add form validation
 const submitBtn = document.querySelector('.btn-submit')
 submitBtn.addEventListener('click', (event) => {
@@ -171,4 +182,5 @@ submitBtn.addEventListener('click', (event) => {
   validateCountries()
   validatePostalCode()
   validateTotalPrice()
+  showAlert()
 })
