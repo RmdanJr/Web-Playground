@@ -1,0 +1,64 @@
+.btn-container {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btn-container > p {
+  font-family: Ubuntu Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.btn-default {
+  grid-area: btn-default;
+}
+.btn-outline {
+  grid-area: btn-outline;
+}
+.btn-text {
+  grid-area: btn-text;
+}
+.btn-disable-shadow {
+  grid-area: btn-disable-shadow;
+}
+.btn-disabled {
+  grid-area: btn-disabled;
+}
+.btn-text-disabled {
+  grid-area: btn-text-disabled;
+}
+.btn-start-icon {
+  grid-area: btn-start-icon;
+}
+.btn-end-icon {
+  grid-area: btn-end-icon;
+}
+.btn-size-sm {
+  grid-area: btn-size-sm;
+}
+.btn-size-md {
+  grid-area: btn-size-md;
+}
+.btn-size-lg {
+  grid-area: btn-size-lg;
+}
+
+.btn-color-default {
+  grid-area: btn-color-default;
+}
+.btn-color-primary {
+  grid-area: btn-color-primary;
+}
+.btn-color-secondary {
+  grid-area: btn-color-secondary;
+}
+.btn-color-danger {
+  grid-area: btn-color-danger;
+}
