@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+.search-bar {
+  width: 297px;
+  height: 55px;
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  display: flex;
+}
+
+.search-bar .input-location {
+  width: 84px;
+  height: 55px;
+  padding: 0 27px;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-right: 1px solid #f2f2f2;
+}
+
+.search-bar .input-location::placeholder {
+  text-align: left;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #bdbdbd;
+}
+
+.search-bar .input-guests {
+  width: 76px;
+  height: 55px;
+  padding: 0 15px;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-right: 1px solid #f2f2f2;
+}
+
+.search-bar .input-guests::placeholder {
+  text-align: left;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #bdbdbd;
+}
+
+.search-bar .icon-container {
+  width: 53px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-bar .search-icon {
+  color: #eb5757;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
