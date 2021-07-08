@@ -1,16 +1,14 @@
 import React from 'react'
 import SearchBar from './SearchBar'
-import SearchModal from './SearchModal'
-import './Header.css'
+import '../styles/Header.css'
 
-const Header = () => {
+const Header = ({ setSearch }) => {
   return (
     <div className='header'>
       <div className='img-container'>
         <img src='./logo.png' alt='Winbnb Logo' className='logo-img' />
       </div>
-      <SearchBar />
-      <SearchModal />
+      <SearchBar setSearch={setSearch} />
     </div>
   )
 }

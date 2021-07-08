@@ -1,5 +1,5 @@
 import React from 'react'
-import './Stay.css'
+import '../styles/Stay.css'
 
 const Stay = ({ imgSrc, isSuperHost, type, numOfBeds, rating, title }) => {
   const superHostClass = isSuperHost ? 'super-host' : 'super-host hidden'

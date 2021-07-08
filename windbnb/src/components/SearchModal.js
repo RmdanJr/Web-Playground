@@ -1,15 +1,29 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
-import './SearchModal.css'
+import '../styles/SearchModal.css'
 
 const SearchModal = () => {
   return createPortal(
-    <div className='modal-container'>
-      <div className='modal'>
+    <div
+      className='modal-container'
+      onClick={() => {
+        document.querySelector('#modal-el').classList = 'hidden'
+        document.querySelector('#root').classList = ''
+      }}
+    >
+      <div className='modal' onClick={(event) => {event.stopPropagation()}}>
         <div className='lg-grid'>
           <div className='modal-head'>
             <p className='modal-head-p'>Edit your search</p>
-            <span className='material-icons close-icon'>close</span>
+            <span
+              className='material-icons close-icon'
+              onClick={() => {
+                document.querySelector('#modal-el').classList = 'hidden'
+                document.querySelector('#root').classList = ''
+              }}
+            >
+              close
+            </span>
           </div>
           <div className='input-group'>
             <div className='input input-location'>
