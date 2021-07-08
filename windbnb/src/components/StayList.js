@@ -3,23 +3,24 @@ import Stay from './Stay'
 import '../styles/StayList.css'
 import InitialStays from '../stays.json'
 
-const StayList = ({ search }) => {
-  const [stays, setStays] = useState(
-    InitialStays.filter(
-      (stay) =>
-        `${stay.city}, ${stay.country}` === search.location &&
-        stay.maxGuests >= search.guests
+const StayList = ({ search, setOtherStays }) => {
+  const filterStays = (InitialStays, search) => {
+    let filteredStays = InitialStays.filter(
+      (stay) => stay.maxGuests >= search.guests
     )
-  )
+    if (search.location !== '')
+      filteredStays = filteredStays.filter(
+        (stay) => `${stay.city}, ${stay.country}` === search.location
+      )
+    return filteredStays
+  }
+
+  const [stays, setStays] = useState(filterStays(InitialStays, search))
 
   useEffect(() => {
-    setStays(
-      InitialStays.filter(
-        (stay) =>
-          `${stay.city}, ${stay.country}` === search.location &&
-          stay.maxGuests >= search.guests
-      )
-    )
+    const filteredStays = filterStays(InitialStays, search)
+    setOtherStays(InitialStays.length - filteredStays.length)
+    setStays(filteredStays)
   }, [search])
 
   return (
