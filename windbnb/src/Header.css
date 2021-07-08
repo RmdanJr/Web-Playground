@@ -1,0 +1,26 @@
+.header {
+  width: calc(95% - 5px);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-container {
+  width: 297px;
+  height: 55px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    flex-direction: column;
+  }
+  .img-container {
+   width: 350px;
+   margin-bottom: 30px;
+  }
+}
