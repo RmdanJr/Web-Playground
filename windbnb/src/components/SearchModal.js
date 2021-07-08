@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
 import '../styles/SearchModal.css'
 
-const SearchModal = () => {
+const SearchModal = ({ search, setSearch, setLocationP, setGuestsP }) => {
+  const [location, setLocation] = useState(search.location)
+  const [guests, setGuests] = useState(search.guests)
   return createPortal(
     <div
       className='modal-container'
@@ -11,7 +13,12 @@ const SearchModal = () => {
         document.querySelector('#root').classList = ''
       }}
     >
-      <div className='modal' onClick={(event) => {event.stopPropagation()}}>
+      <div
+        className='modal'
+        onClick={(event) => {
+          event.stopPropagation()
+        }}
+      >
         <div className='lg-grid'>
           <div className='modal-head'>
             <p className='modal-head-p'>Edit your search</p>
@@ -25,16 +32,39 @@ const SearchModal = () => {
               close
             </span>
           </div>
-          <div className='input-group'>
+          <form
+            className='input-group'
+            onSubmit={(event) => {
+              event.preventDefault()
+              setLocationP(location)
+              setGuestsP(guests)
+              setSearch({ location: location, guests: guests })
+            }}
+          >
             <div className='input input-location'>
               <p>location</p>
-              <input type='text' placeholder='Add location' />
+              <input
+                type='text'
+                placeholder='Add location'
+                value={location}
+                onChange={(event) => {
+                  setLocation(event.target.value)
+                }}
+              />
             </div>
             <div className='input input-guests'>
               <p>guests</p>
-              <input type='text' placeholder='Add guests' />
+              <input
+                type='text'
+                placeholder='Add guests'
+                value={guests}
+                onChange={(event) => {
+                  setGuests(event.target.value)
+                }}
+              />
             </div>
-          </div>
+            <input type='submit' value='' style={{ display: 'none' }} />
+          </form>
           <div className='input-suggestions'>
             {[
               'Helsinki, Finland',
@@ -42,14 +72,25 @@ const SearchModal = () => {
               'Oulu, Finland',
               'Vaasa, Finland',
             ].map((location) => (
-              <div key={location} className='location'>
+              <div
+                key={location}
+                className='location'
+                onClick={() => setLocation(location)}
+              >
                 <span className='material-icons'>location_on</span>
                 <p>{location}</p>
               </div>
             ))}
           </div>
           <div className='btn-search-container'>
-            <button className='btn-search'>
+            <button
+              className='btn-search'
+              onClick={() => {
+                setLocationP(location)
+                setGuestsP(guests)
+                setSearch({ location: location, guests: guests })
+              }}
+            >
               <span className='material-icons search-icon'>search</span>
               <p className='btn-text'>Search</p>
             </button>

@@ -9,7 +9,7 @@ const App = () => {
   })
   return (
     <div className='app'>
-      <Header setSearch={setSearch} />
+      <Header search={search} setSearch={setSearch} />
       <StayList search={search} />
     </div>
   )

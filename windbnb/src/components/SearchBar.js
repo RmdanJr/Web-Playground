@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import '../styles/SearchBar.css'
 import SearchModal from './SearchModal'
 
-const SearchBar = ({ setSearch }) => {
-  const [location, setLocation] = useState('Turku, Finland')
-  const [guests, setGuests] = useState(1)
+const SearchBar = ({ search, setSearch }) => {
+  const [location, setLocation] = useState(search.location)
+  const [guests, setGuests] = useState(search.guests)
   document.querySelector('#modal-el').classList = 'hidden'
   document.querySelector('#root').classList = ''
 
@@ -46,7 +46,12 @@ const SearchBar = ({ setSearch }) => {
           <span className='material-icons search-icon'>search</span>
         </div>
       </form>
-      <SearchModal />
+      <SearchModal
+        search={search}
+        setSearch={setSearch}
+        setLocationP={setLocation}
+        setGuestsP={setGuests}
+      />
     </>
   )
 }

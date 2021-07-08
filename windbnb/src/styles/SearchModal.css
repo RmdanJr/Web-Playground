@@ -127,6 +127,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  cursor: pointer;
 }
 
 .input-suggestions {
