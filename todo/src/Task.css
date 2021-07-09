@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.task-check {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.task-name {
+  width: calc(fit-content + 10px);
+  height: fit-content;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  text-align: center;
+}
+
+.task {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.line-through {
+  text-decoration-line: line-through;
+}

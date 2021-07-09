@@ -1,0 +1,38 @@
+.delete-all-container {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.delete-all-btn {
+  width: 124px;
+  height: 40px;
+  background: #eb5757;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-all-btn p {
+  width: 70px;
+  height: 15.79px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.delete-all-btn span {
+  width: 20px;
+  color: #ffffff;
+}
