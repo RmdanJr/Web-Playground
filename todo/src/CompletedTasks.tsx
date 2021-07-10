@@ -2,12 +2,18 @@ import React from 'react'
 import TaskList from './TaskList'
 import DeleteAll from './DeleteAll'
 
+type ts = {
+  id: number
+  title: string
+  isActive: boolean
+}
+
 const CompletedTasks = ({
   tasks,
   setTasks,
 }: {
-  tasks: { id: number; title: string; isActive: boolean }[]
-  setTasks: (a: { id: number; title: string; isActive: boolean }[]) => void
+  tasks: ts[]
+  setTasks: (a: ts[]) => void
 }) => {
   return (
     <>

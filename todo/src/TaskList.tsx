@@ -1,15 +1,23 @@
 import React from 'react'
 import Task from './Task'
+import './TaskList.css'
+
+type ts = {
+  id: number
+  title: string
+  isActive: boolean
+}
 
 const TaskList = ({
   tasks,
   setTasks,
   type,
 }: {
-  tasks: { id: number; title: string; isActive: boolean }[]
-  setTasks: (a: { id: number; title: string; isActive: boolean }[]) => void
+  tasks: ts[]
+  setTasks: (a: ts[]) => void
   type: string
 }) => {
+  const displayDeleteBtns = type === 'completed' ? true : false
   let renderedTasks = tasks
   if (type === 'active')
     renderedTasks = renderedTasks.filter((task) => task.isActive)
@@ -18,7 +26,13 @@ const TaskList = ({
   return (
     <div className='tasks'>
       {renderedTasks.map((task) => (
-        <Task key={task.id} task={task} tasks={tasks} setTasks={setTasks} />
+        <Task
+          key={task.id}
+          task={task}
+          tasks={tasks}
+          setTasks={setTasks}
+          displayDeleteBtns={displayDeleteBtns}
+        />
       ))}
     </div>
   )

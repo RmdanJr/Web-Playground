@@ -9,7 +9,7 @@ const InputForm = ({
   tasks: { id: number; title: string; isActive: boolean }[]
   setTasks: (a: { id: number; title: string; isActive: boolean }[]) => void
 }) => {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState<string>('')
   const addToDoHandle = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (title !== '') {

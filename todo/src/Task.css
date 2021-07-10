@@ -21,13 +21,31 @@
 }
 
 .task {
-  width: 600px;
+  width: 550px;
   height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin: auto;
+}
+
+.delete-icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon {
+  color: #bdbdbd;
+  cursor: pointer;
+
+}
+
+.task-container {
+  display: flex;
 }
 
 .line-through {

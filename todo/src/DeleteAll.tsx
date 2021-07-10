@@ -1,12 +1,18 @@
 import React from 'react'
 import './DeleteAll.css'
 
+type ts = {
+  id: number
+  title: string
+  isActive: boolean
+}
+
 const DeleteAll = ({
   tasks,
   setTasks,
 }: {
-  tasks: { id: number; title: string; isActive: boolean }[]
-  setTasks: (a: { id: number; title: string; isActive: boolean }[]) => void
+  tasks: ts[]
+  setTasks: (a: ts[]) => void
 }) => {
   const handleClick = () => {
     const filteredTasks = tasks.filter((task) => task.isActive)
