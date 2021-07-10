@@ -1,5 +1,5 @@
 import React from 'react'
-import './Task.css'
+import '../styles/Task.css'
 
 type ts = {
   id: number

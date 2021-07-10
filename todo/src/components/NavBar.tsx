@@ -1,6 +1,6 @@
 import React from 'react'
-import './NavBar.css'
 import { Link } from 'react-router-dom'
+import '../styles/NavBar.css'
 
 const NavTab = ({ title }: { title: string }) => {
   return <div className='nav-tab'>{title}</div>

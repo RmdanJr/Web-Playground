@@ -6,7 +6,7 @@ import NavBar from './NavBar'
 import AllTasks from './AllTasks'
 import ActiveTasks from './ActiveTasks'
 import CompletedTasks from './CompletedTasks'
-import './App.css'
+import '../styles/App.css'
 
 type ts = {
   id: number

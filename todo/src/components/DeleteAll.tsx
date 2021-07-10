@@ -1,5 +1,5 @@
 import React from 'react'
-import './DeleteAll.css'
+import '../styles/DeleteAll.css'
 
 type ts = {
   id: number

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import './InputForm.css'
+import '../styles/InputForm.css'
 
 const InputForm = ({
   tasks,
