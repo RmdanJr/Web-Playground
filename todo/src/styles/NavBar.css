@@ -13,11 +13,6 @@
   cursor: pointer;
 }
 
-.nav-tab:hover,
-.nav-tab:active {
-  border-bottom: 2px solid #2f80ed;
-}
-
 .nav-bar {
   width: 600px;
   height: 40px;
