@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Task from './Task'
 import '../styles/TaskList.css'
 
@@ -8,16 +9,10 @@ type ts = {
   isActive: boolean
 }
 
-const TaskList = ({
-  tasks,
-  setTasks,
-  type,
-}: {
-  tasks: ts[]
-  setTasks: (a: ts[]) => void
-  type: string
-}) => {
+const TaskList = ({ type }: { type: string }) => {
   const displayDeleteBtns = type === 'completed' ? true : false
+  const getTasks = (state: { todos: ts[] }) => state.todos
+  const tasks = useSelector(getTasks)
   let renderedTasks = tasks
   if (type === 'active')
     renderedTasks = renderedTasks.filter((task) => task.isActive)
@@ -29,8 +24,6 @@ const TaskList = ({
         <Task
           key={task.id}
           task={task}
-          tasks={tasks}
-          setTasks={setTasks}
           displayDeleteBtns={displayDeleteBtns}
         />
       ))}

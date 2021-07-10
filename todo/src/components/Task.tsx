@@ -1,4 +1,8 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+
+import { deleteTask, checkTask } from '../actions'
+
 import '../styles/Task.css'
 
 type ts = {
@@ -8,32 +12,19 @@ type ts = {
 }
 
 const Task = ({
-  tasks,
   task,
-  setTasks,
   displayDeleteBtns,
 }: {
-  tasks: ts[]
   task: ts
-  setTasks: (tasks: ts[]) => void
   displayDeleteBtns: boolean
 }) => {
+  const dispatch = useDispatch()
   const taskTitleClass = task.isActive ? 'task-name' : 'task-name line-through'
   const handleCheck = () => {
-    const filteredTasks = [
-      ...tasks.filter((t) => t.id !== task.id),
-      { ...task, isActive: !task.isActive },
-    ].sort((a, b) => a.id - b.id)
-    setTasks(filteredTasks)
+    dispatch(checkTask(task))
   }
   const handleDelete = () => {
-    const remainingTasks = [...tasks.filter((t) => t.id !== task.id)].sort(
-      (a, b) => a.id - b.id
-    )
-    for (let i = 0; i < remainingTasks.length; i++) {
-      remainingTasks[i].id = i + 1
-    }
-    setTasks(remainingTasks)
+    dispatch(deleteTask(task))
   }
   return (
     <div className='task-container'>

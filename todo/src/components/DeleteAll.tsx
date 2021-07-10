@@ -1,25 +1,12 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { deleteCompletedTasks } from '../actions'
 import '../styles/DeleteAll.css'
 
-type ts = {
-  id: number
-  title: string
-  isActive: boolean
-}
-
-const DeleteAll = ({
-  tasks,
-  setTasks,
-}: {
-  tasks: ts[]
-  setTasks: (a: ts[]) => void
-}) => {
+const DeleteAll = () => {
+  const dispatch = useDispatch()
   const handleClick = () => {
-    const filteredTasks = tasks.filter((task) => task.isActive)
-    for (let i = 0; i < filteredTasks.length; i++) {
-      filteredTasks[i].id = i + 1
-    }
-    setTasks(filteredTasks)
+    dispatch(deleteCompletedTasks())
   }
   return (
     <div className='delete-all-container'>

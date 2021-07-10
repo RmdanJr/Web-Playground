@@ -1,24 +1,17 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
+import { useDispatch } from 'react-redux'
+
 import '../styles/InputForm.css'
 
-const InputForm = ({
-  tasks,
-  setTasks,
-}: {
-  tasks: { id: number; title: string; isActive: boolean }[]
-  setTasks: (a: { id: number; title: string; isActive: boolean }[]) => void
-}) => {
-  const [title, setTitle] = useState<string>('')
-  const addToDoHandle = (event: React.FormEvent<HTMLFormElement>) => {
+import { addTask } from '../actions'
+
+const InputForm = () => {
+  const [title, setTitle] = useState('')
+  const dispatch = useDispatch()
+  const addToDoHandle = (event: FormEvent) => {
     event.preventDefault()
-    if (title !== '') {
-      setTasks([
-        ...tasks,
-        { id: tasks.length + 1, title: title, isActive: true },
-      ])
-      setTitle('')
-    }
+    dispatch(addTask({ title: title, isActive: true }))
+    setTitle('')
   }
   return (
     <form className='form' onSubmit={addToDoHandle}>

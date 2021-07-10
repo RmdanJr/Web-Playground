@@ -2,23 +2,11 @@ import React from 'react'
 import TaskList from './TaskList'
 import DeleteAll from './DeleteAll'
 
-type ts = {
-  id: number
-  title: string
-  isActive: boolean
-}
-
-const CompletedTasks = ({
-  tasks,
-  setTasks,
-}: {
-  tasks: ts[]
-  setTasks: (a: ts[]) => void
-}) => {
+const CompletedTasks = () => {
   return (
     <>
-      <TaskList tasks={tasks} setTasks={setTasks} type='completed' />
-      <DeleteAll tasks={tasks} setTasks={setTasks} />
+      <TaskList type='completed' />
+      <DeleteAll />
     </>
   )
 }
