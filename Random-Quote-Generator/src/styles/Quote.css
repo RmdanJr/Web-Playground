@@ -1,0 +1,27 @@
+.quote-continaer {
+  width: 700px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.quote-content {
+  width: 612px;
+  height: 300px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.flag {
+  width: 8px;
+  height: 300px;
+  background: #f7df94;
+}
