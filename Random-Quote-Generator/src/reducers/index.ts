@@ -1,15 +1,18 @@
-import { Quotes } from '../types'
+import { stateType, quoteType } from '../types'
 
-const initialQuotes: Quotes = []
+const initialQuotes: stateType = {
+  randomQuote: [],
+  authorQuotes: [],
+}
 export const quotesReducer = (
   quotes = initialQuotes,
-  action: { type: string; payload: Quotes[] }
+  action: { type: string; payload: quoteType[] }
 ) => {
   switch (action.type) {
     case 'GET_RANDOM_QUOTE':
-      return action.payload
+      return { ...quotes, randomQuote: action.payload }
     case 'GET_AUTHOR_QUOTES':
-      return action.payload
+      return { ...quotes, authorQuotes: action.payload }
     default:
       return quotes
   }

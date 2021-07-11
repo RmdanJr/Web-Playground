@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+.icon-container:hover,
+.icon-container:active {
+  cursor: pointer;
+}
+
 .auto-icon {
   color: #4f4f4f;
   font-size: 22px;

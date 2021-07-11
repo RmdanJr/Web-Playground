@@ -1,21 +1,22 @@
+import { Dispatch } from 'redux'
 import api from '../api'
 
 export const getRandomQuote = () => {
-  return async () => {
+  return async (dispatch: Dispatch) => {
     const response = await api({}).get('/random')
-    return {
+    dispatch({
       type: 'GET_RANDOM_QUOTE',
-      payload: response.data,
-    }
+      payload: response.data.data,
+    })
   }
 }
 
 export const getAuthorQuote = (author: string) => {
-  return async () => {
+  return async (dispatch: Dispatch) => {
     const response = await api({ author: author }).get('/')
-    return {
+    dispatch({
       type: 'GET_AUTHOR_QUOTES',
-      payload: response.data,
-    }
+      payload: response.data.data,
+    })
   }
 }

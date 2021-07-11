@@ -7,7 +7,7 @@
 }
 
 .author-name {
-  width: 109px;
+  width: fit-content;
   height: 28px;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -19,7 +19,7 @@
 }
 
 .author-genre {
-  width: 58px;
+  width: fit-content;
   height: 16px;
   font-family: 'Raleway', sans-serif;
   font-style: normal;

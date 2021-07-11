@@ -1,15 +1,10 @@
 import '../styles/Quote.css'
 
-const Quote: React.FC = () => {
+const Quote: React.FC<{ quoteContent: string }> = ({quoteContent}) => {
   return (
     <div className='quote-continaer'>
       <div className='flag'></div>
-      <div className='quote-content'>
-        “The first rule of any technology used in a business is that automation
-        applied to an efficient operation will magnify the efficiency. The
-        second is that automation applied to an inefficient operation will
-        magnify the inefficiency.”
-      </div>
+      <div className='quote-content'>“{quoteContent}”</div>
     </div>
   )
 }
