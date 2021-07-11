@@ -5,7 +5,7 @@ export const getRandomQuote = () => {
     const response = await api({}).get('/random')
     return {
       type: 'GET_RANDOM_QUOTE',
-      payload: response.data[0],
+      payload: response.data,
     }
   }
 }
