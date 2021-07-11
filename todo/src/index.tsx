@@ -5,11 +5,7 @@ import { combineReducers, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { todosReducer } from './reducers'
 
-type ts = {
-  id: number
-  title: string
-  isActive: true
-}
+import { ts } from './types'
 
 const store = createStore(
   combineReducers<

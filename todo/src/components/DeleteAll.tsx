@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { deleteCompletedTasks } from '../actions'
 import '../styles/DeleteAll.css'
 
-const DeleteAll = () => {
+const DeleteAll: React.FC = () => {
   const dispatch = useDispatch()
   const handleClick = () => {
     dispatch(deleteCompletedTasks())

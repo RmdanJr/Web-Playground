@@ -5,13 +5,15 @@ import '../styles/InputForm.css'
 
 import { addTask } from '../actions'
 
-const InputForm = () => {
+const InputForm: React.FC = () => {
   const [title, setTitle] = useState('')
   const dispatch = useDispatch()
   const addToDoHandle = (event: FormEvent) => {
     event.preventDefault()
-    dispatch(addTask({ title: title, isActive: true }))
-    setTitle('')
+    if (title !== '') {
+      dispatch(addTask({ title: title, isActive: true }))
+      setTitle('')
+    }
   }
   return (
     <form className='form' onSubmit={addToDoHandle}>

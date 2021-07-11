@@ -8,7 +8,7 @@ import CompletedTasks from './CompletedTasks'
 
 import '../styles/App.css'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className='app'>
       <BrowserRouter>

@@ -1,8 +1,4 @@
-type ts = {
-  id: number
-  title: string
-  isActive: boolean
-}
+import { ts } from '../types'
 
 const initialTasks: ts[] = []
 export const todosReducer = (
@@ -27,7 +23,7 @@ export const todosReducer = (
       return [
         ...tasks.filter((task) => task.id !== action.payload!.id),
         { ...action.payload!, isActive: !action.payload!.isActive },
-      ].sort((a, b) => a.id - b.id)
+      ].sort((a, b) => a.id! - b.id!)
     default:
       return tasks
   }

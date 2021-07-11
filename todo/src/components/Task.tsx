@@ -5,19 +5,12 @@ import { deleteTask, checkTask } from '../actions'
 
 import '../styles/Task.css'
 
-type ts = {
-  id: number
-  title: string
-  isActive: boolean
-}
+import { ts } from '../types'
 
-const Task = ({
-  task,
-  displayDeleteBtns,
-}: {
+const Task: React.FC<{
   task: ts
   displayDeleteBtns: boolean
-}) => {
+}> = ({ task, displayDeleteBtns }) => {
   const dispatch = useDispatch()
   const taskTitleClass = task.isActive ? 'task-name' : 'task-name line-through'
   const handleCheck = () => {

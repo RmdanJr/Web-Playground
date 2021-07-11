@@ -3,13 +3,9 @@ import { useSelector } from 'react-redux'
 import Task from './Task'
 import '../styles/TaskList.css'
 
-type ts = {
-  id: number
-  title: string
-  isActive: boolean
-}
+import { ts } from '../types'
 
-const TaskList = ({ type }: { type: string }) => {
+const TaskList: React.FC<{ type: string }> = ({ type }) => {
   const displayDeleteBtns = type === 'completed' ? true : false
   const getTasks = (state: { todos: ts[] }) => state.todos
   const tasks = useSelector(getTasks)
@@ -21,11 +17,7 @@ const TaskList = ({ type }: { type: string }) => {
   return (
     <div className='tasks'>
       {renderedTasks.map((task) => (
-        <Task
-          key={task.id}
-          task={task}
-          displayDeleteBtns={displayDeleteBtns}
-        />
+        <Task key={task.id} task={task} displayDeleteBtns={displayDeleteBtns} />
       ))}
     </div>
   )

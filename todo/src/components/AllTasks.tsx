@@ -2,7 +2,7 @@ import React from 'react'
 import InputForm from './InputForm'
 import TaskList from './TaskList'
 
-const AllTasks = () => {
+const AllTasks: React.FC = () => {
   return (
     <>
       <InputForm />

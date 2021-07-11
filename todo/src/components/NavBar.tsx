@@ -2,11 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../styles/NavBar.css'
 
-const NavTab = ({ title }: { title: string }) => {
+const NavTab: React.FC<{ title: string }> = ({ title }) => {
   return <div className='nav-tab'>{title}</div>
 }
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <div className='nav-bar'>
       {['All', 'Active', 'Completed'].map((navTab) => (

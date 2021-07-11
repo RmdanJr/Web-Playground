@@ -1,8 +1,4 @@
-type ts = {
-  id?: number
-  title: string
-  isActive: boolean
-}
+import { ts } from '../types'
 
 export const addTask = (task: ts) => {
   return {
