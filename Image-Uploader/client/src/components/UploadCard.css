@@ -1,0 +1,87 @@
+.upload-card {
+ width: 402px;
+ height: 469px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.upload-card__title {
+ font-family: 'Poppins', sans-serif;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 27px;
+ text-align: center;
+ letter-spacing: -0.035em;
+ color: #4F4F4F;
+ margin-top: 20px;
+ margin-bottom: 16px;
+}
+
+.upload-card__desc {
+ font-family: 'Poppins';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 10px;
+ line-height: 15px;
+ text-align: center;
+ letter-spacing: -0.035em;
+ color: #828282;
+ margin-bottom: 30px;
+}
+
+.upload-card__ins {
+ font-family: 'Poppins';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 12px;
+ line-height: 18px;
+ letter-spacing: -0.035em;
+ color: #BDBDBD;
+}
+
+.upload-card__img-placeholder {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 338px;
+ height: 218.9px;
+ background: #F6F8FB;
+ border: 1px dashed #97BEF4;
+ border-radius: 12px;
+ margin-bottom: 18px;
+}
+
+.upload-card__background-img {
+ margin: auto;
+}
+
+.upload-card__text {
+ font-family: 'Poppins';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 12px;
+ line-height: 18px;
+ text-align: center;
+ letter-spacing: -0.035em;
+ color: #BDBDBD;
+ margin-bottom: 21px;
+}
+
+.upload-card__button {
+ background: #2F80ED;
+ border-radius: 8px;
+}
+
+.upload-card__button-text {
+ font-family: 'Noto Sans', sans-serif;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 12px;
+ line-height: 16px;
+ text-align: center;
+ letter-spacing: -0.035em;
+ color: #FFFFFF;
+}
